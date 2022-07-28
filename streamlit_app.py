@@ -14,7 +14,10 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-
+HtmlFile = open("https://github.com/OmdenaAI/trieste-italy-long-covid/blob/main/src/tasks/task-7-descriptive_data_analysis/final%20LDA%20attempt/02_Create%20pretrained%20LDA%20Model%20on%20Q1%20Data/lda_visualization_6_topics_Q1_data.html", 'r', encoding='utf-8')
+source_code = HtmlFile.read() 
+print(source_code)
+components.html(source_code)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
